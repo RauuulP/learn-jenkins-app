@@ -29,10 +29,15 @@ pipeline {
             }
             steps {
                 sh '''
-                    echo "Test stage"
-                    grep -r 'index.html' build/
+                    test -f build/index.html
                     npm test
                 '''
+
+                // sh '''
+                //     echo "Test stage"
+                //     grep -r 'index.html' build/
+                //     npm test
+                // '''
             }
         }
     }
