@@ -25,8 +25,7 @@ pipeline {
                 sh '''
                     echo "Test stage"
                     grep -r --exclude-dir=static 'index.html' build/
-                    echo "Grep added"
-
+                    npm test
                 '''
             }
         }
