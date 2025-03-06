@@ -30,7 +30,7 @@ pipeline {
             steps {
                 sh '''
                     echo "Test stage"
-                    grep -r --exclude-dir=static 'index.html' build/
+                    grep 'index.html' build/
                     npm test
                 '''
             }
