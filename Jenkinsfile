@@ -24,7 +24,7 @@ pipeline {
             steps {
                 sh '''
                     echo "Test stage"
-                    grep 'index.html' build/
+                    grep -r --exclude-dir=static 'index.html' build/
                     echo "Grep added"
 
                 '''
